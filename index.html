@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible'>
+    <title>Generador de facturas</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='.\\css\\default.css'>
+    
+</head>
+<body>
+    <section class="tablaSeccion">
+        <form id="formulario"  method="POST">
+            <input type="text" class="inputs"  placeholder="Código Producto" name="code" id="code" required>
+            <input type="number" class="inputs" placeholder="Cantidad" id="cant" required>
+            <button type="submit" name="enviar" value="Enviar" class="btnEnviar" id="btnEnvia">Enviar</button>
+        </form>
+
+        <button id="btnAyuda" class="btnEnviar">Ayuda</button>
+        <button id="btnLimpiar" class="btnEnviar">Limpiar</button>
+        <h1>Factura</h1>
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" >
+            <thead>
+              <tr>
+                <th>Codigo</th>
+                <th>Cantidad</th>
+                <th>Descripción</th>
+                <th>Precio Unitario</th>
+                <th>Precio Total</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content" id="tablaFactura">
+          <table cellpadding="0" cellspacing="0" id="tablaLimpiar1">
+            <tbody id="tablaFacturaBody1">
+              
+            </tbody>
+          </table>
+        </div>
+
+        <div class="tbl-header">
+          <table cellpadding="0" cellspacing="0" >
+            <thead>
+              <tr>
+                <th>Subtotal</th>
+                <th>I.V.A</th>
+                <th>Total</th>
+              </tr>
+            </thead>
+          </table>
+        </div>
+        <div class="tbl-content" id="tablaFactura">
+          <table cellpadding="0" cellspacing="0" id="tablaLimpiar2">
+            <tbody id="tablaFacturaBody2">
+              <tr>
+                <td id="Subtotal"></td>
+                <td id="iva"></td>
+                <td id="Total"></td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+      
+      
+
+      <div class="pie">
+        
+            Realizado por David Díaz Márquez
+      </div>
+</body>
+<script src="js/jquery-3.6.3.min.js"></script>
+<script src='.\\js\\tabla.js'></script>
+<script src='.\\js\\botones.js'></script>
+</html>
